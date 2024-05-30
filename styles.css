@@ -1,0 +1,428 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+
+.zoom-in {
+    animation: ZoomInAnimation ease 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes ZoomInAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+/* Aggiungi l'animazione solo ai primi due elementi con la classe .animate */
+.animate {
+    opacity: 0;
+    transform: translateX(5px); /* Modifica la distanza di spostamento */
+    animation: fade-in 0.3s ease-out forwards; /* Riduci la durata dell'animazione */
+}
+
+
+/* Definisci l'animazione di fade-in */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(5%); /* Parti da destra */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Arriva al punto originale */
+    }
+}
+
+.intro:nth-child(1) {
+    animation-delay: 0.05s; /* Ritardo per il secondo paragrafo */
+}
+
+/* Applica un ritardo diverso ai primi due elementi con la classe .animate */
+.animate:nth-child(1) {
+    animation-delay: 0.1s; /* Ritardo per il primo elemento */
+}
+
+.animate:nth-child(2) {
+    animation-delay: 0.15s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(3) {
+    animation-delay: 0.2s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(4) {
+    animation-delay: 0.25s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(5) {
+    animation-delay: 0.3s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(6) {
+    animation-delay: 0.35s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(7) {
+    animation-delay: 0.4s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(8) {
+    animation-delay: 0.45s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(9) {
+    animation-delay: 0.5s; /* Ritardo per il secondo elemento */
+}
+
+.animate:nth-child(10) {
+    animation-delay: 0.55s; /* Ritardo per il secondo elemento */
+}
+
+.content p:nth-child(3) {
+    animation-delay: 0.6s; /* Ritardo per il secondo elemento */
+}
+
+.content p:nth-child(4) {
+    animation-delay: 0.65s; /* Ritardo per il secondo elemento */
+}
+
+
+
+/* Continua con i ritardi per gli altri elementi */
+
+
+body {
+    background-color: #FBFFF4;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace, 'Roboto', sans-serif; /* Aggiunge Roboto come alternativa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #FBFFF4;
+    color: #333;
+    padding: 10px 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;  
+    letter-spacing: 0px;
+    font-size: 20px;
+    padding-left: 10px; /* Aggiunge spazio a sinistra */
+    padding-right: 10px; /* Aggiunge spazio a destra */ 
+    font-weight: 100;
+    transition: all 0.5s ease;
+    margin-right: 15px;
+    
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.brand-img {    
+    max-width: 25%;
+    max-height: 25%;
+    margin-top: -17.5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Sposta i pulsanti più in alto */
+    margin-bottom: 135px; /* Aggiungi spazio sotto i pulsanti */
+}
+
+.button {
+    width: 127px;
+    height: 51px;
+    padding: 0;
+    background-color: transparent;
+    border: 2px solid #080404;
+    border-radius: 5px;
+    margin: 0 150px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: all 0.25s ease;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 550;
+ 
+}
+.a-button {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+.button:hover {
+    background-color: #080404;
+    color: #fff;
+}
+
+.logo {
+    width: 50px;
+    height: 45px;
+    margin-right: 300px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+/* Posiziona l'icona Instagram al centro della pagina */
+.social-icon {
+    position: fixed;
+    bottom: 50px; /* Distanza dal basso della pagina */
+}
+
+.instagram-icon {
+    width: 35px;
+    height: 35px;
+    left: calc(50% - 75px); /* Posiziona l'icona Instagram al centro */
+    margin-right: 20px; /* Aggiunge un margine a destra dell'icona */
+}
+
+.email-icon {
+    width: 35px;
+    height: 35px;
+    left: calc(50% - 15px); /* Posiziona l'icona per la posta elettronica a destra di Instagram */
+    margin-right: 20px; /* Aggiunge un margine a destra dell'icona */
+}
+
+.linkedin-icon {
+    width: 30px;
+    height: 30px;
+    left: calc(50% + 45px); /* Posiziona l'icona di LinkedIn a destra di Email */
+    margin-right: 20px; /* Aggiunge un margine a destra dell'icona */
+    margin-bottom: 5px;
+}
+
+
+.intro {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: -30px;
+    opacity: 0;
+    transform: translateX(5px); /* Modifica la distanza di spostamento */
+    animation: fade-in 0.3s ease-out forwards; /* Riduci la durata dell'animazione */
+}
+
+ul.main-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #616161;
+}
+
+ul.main-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px; /* Aggiunge uno spazio di 10px tra gli elementi della lista */
+}
+
+ul.main-list li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-size: 6px; /* Regola la dimensione del carattere del pallino */
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.contact-info{
+    margin-left: -30px;
+}
+
+.contact-info a {
+    text-decoration: none; /* Rimuovi la sottolineatura predefinita */
+    position: relative; /* Imposta la posizione relativa per consentire l'assoluta */
+    color: #4876ec;
+    
+}
+
+.contact-info a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Aumenta questo valore per far scendere la sottolineatura */
+    width: 100%;
+    height: 1px; /* Altezza della sottolineatura */
+    background-color: #4876ec; /* Colore della sottolineatura */
+}
+
+.intro,
+.contact-info,
+ul.main-list li {
+    font-weight: lighter; /* Reimposta il peso del carattere a normale */
+    font-size: 14px; /* Riduci la dimensione del testo */
+    color: #616161; 
+    margin-right: 900px;
+    
+}
+.content {
+    margin-top: -350px;
+}
+
+.centered {
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 600px;
+    font-weight: 200;
+}
+
+.centered2 {
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 600px;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* Media query per schermi con larghezza massima di 700px */
+@media only screen and (max-width: 767px) {
+    .menu-active .contenuto,
+    .menu-active header img.logo {
+        display: none;
+    }
+
+    .menu-active header nav ul {
+        display: block;
+    }
+    
+    .intro {
+        margin-left: 415px;
+        font-size: 22px;
+        font-weight: 20;
+        display: inline;
+    }
+    
+    .contact-info{
+        margin-left: 415px;
+        display: inline;
+        position: absolute;
+        
+    }
+
+    .esploso {
+        margin-top: 65px;
+    }
+
+    .main-list li {
+        margin-left: 440px;
+        display: list-item;
+    }
+
+    .nav-toggle {
+        display: contents;
+    }
+
+    nav ul.show {
+        display: block;
+        text-align: center;
+        margin-top: 800px;
+        margin-right: -20px;
+        font-size: 24px;
+    }
+
+    .vogliomorire {
+        display:block;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    nav ul.show li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    /* Stili per quando la larghezza dello schermo è al massimo 700px */
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: none;
+        text-align: center;
+        margin-top: 20px; /* Aggiungiamo un margine sopra la lista */
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column; /* Colonne anziché righe */
+        align-items: center; /* Centra i figli lungo l'asse trasversale */
+    }
+
+
+    .brand-img {
+        width: 308.25px; /* Imposta la larghezza desiderata */
+        height: auto; /* Imposta l'altezza in modo proporzionale */
+        margin-bottom: 125px; /* Spazio tra l'immagine e i pulsanti */
+        max-width: none !important;
+    }
+
+    .button-container {
+        order: 1; /* Ridisposizione dei pulsanti sopra l'immagine */
+    }
+
+    .button {
+        margin: 0px; /* Aggiungi un margine tra i pulsanti */
+        margin-top: 355px;
+        
+    }
+
+    section {
+        width: 100%; /* Occupa tutta la larghezza disponibile */
+    }
+
+
+}
